@@ -5,9 +5,12 @@ import Pokedex from './components/Pokedex';
 import Evolution from './components/Evolution'
 
 function App() {
-  const [pokemons, setPokemons] = useState(null);
+  const [pokemons, setPokemons] = useState([]);
+  const [loading,setLoading] = useState (false);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       const result=[];
       for(let i=1;i<=2;i++){
@@ -15,33 +18,37 @@ function App() {
       }
       //console.log(result); 
       setPokemons(result);
+      setLoading(false);
     };
     
     fetchData();    
   }, []);
 
+  if(loading){
+    return <p>Cargando...</p>;
+  }
+ 
+  const pokeFiltered=pokemons.filter(pokeInfo=>{
+    console.log(pokeInfo.data.forms[0].name.toLowerCase().includes(search));
+    return pokeInfo.data.forms[0].name.toLowerCase().includes(search);
+    });
 
   return (    
     <div>
-      {pokemons 
-          ?(<>
-            <div className='pokemonList'>
-            {pokemons.map((pokeInfo,index)=>{
-                return(                  
-                  <Pokedex 
-                    key={index}
-                    pokeIndex={index+1}
-                    pokeName={pokeInfo.data.forms[0].name}
-                    pokeType={pokeInfo.data.types}
-                  />                         
-                )
-              })}
-            </div>
-            {console.log(pokemons)}
-            <Evolution/>                
-          </>)
-          :(<>Cargando...</>)      
-        }
+      <input type='text' placeholder='Search' onChange={e=>setSearch(e.target.value.toLowerCase())}/>
+        <div className='pokemonList'>
+          {pokeFiltered.map((pokeInfo,index)=>{
+              return(                  
+                <Pokedex 
+                  key={index}
+                  pokeIndex={pokeInfo.data.id}
+                  pokeName={pokeInfo.data.forms[0].name}
+                  pokeType={pokeInfo.data.types}
+                />                         
+              )
+            })}
+        </div>
+        {console.log(pokemons)}     
     </div>
   );
 };
