@@ -2,37 +2,71 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pokemonList{
+  border-radius: 15px;
+  display: grid;
+  grid-gap: 25px;
+  grid-auto-rows: minmax(100px, auto);
+  margin: 50px 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .pokemonList{
+    grid-template-columns: repeat(1, 1fr);   
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .pokemonList{
+    grid-template-columns: repeat(2, 1fr);   
   }
 }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .pokemonList{
+    grid-template-columns: repeat(3, 1fr);   
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .pokemonList{
+    grid-template-columns: repeat(4, 1fr);   
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .pokemonList{
+    grid-template-columns: repeat(5, 1fr);   
+  }
+}
+
+.pokemon{
+  display: block;
+  background-color: seashell;
+  text-align: center;
+  margin: o auto;  
+  border-radius: 25px;
+  padding: 15px;
+}
+
+.pokemon p{
+  margin: 4px 0;
+}
+
+.pokeInfo{
+  position: relative;
+  background-color: seashell;
+  background-color: rgb(236, 71, 63);
+  border-radius: 15px;
+  padding: 5px;
+  color: seashell;
+  font-weight: 500;
+  top: -4px;
+  height: 142px;
+}
+
