@@ -1,23 +1,29 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import './App.css';
-import Pokedex from './components/Pokedex';
+import Pokemon from './components/Pokemon';
 import Evolution from './components/Evolution'
 
-function App() {
+function Pokedex() {
   const [pokemons, setPokemons] = useState([]);
+  const [evolutions, setEvolutions] = useState([]);
   const [loading,setLoading] = useState (false);
   const [search, setSearch] = useState('');
 
   useEffect(() => {
     setLoading(true);
     const fetchData = async () => {
-      const result=[];
+      const resultPoke=[];
+      //const resultEvo=[];
       for(let i=1;i<=2;i++){
-        result[i-1] = await axios(`http://pokeapi.salestock.net/api/v2/pokemon/${i}/`); 
+        resultPoke[i-1] = await axios(`http://pokeapi.salestock.net/api/v2/pokemon/${i}/`); 
       }
-      //console.log(result); 
-      setPokemons(result);
+      /*for(let j=1;j<=2;j++){
+        resultPoke[j-1] = await axios(`http://pokeapi.salestock.net/api/v2/evolution-chain/${j}/`); 
+      }
+      console.log(resultEvo);*/ 
+      setPokemons(resultPoke);
+      //setEvolutions(resulEvo);
       setLoading(false);
     };
     
@@ -39,7 +45,7 @@ function App() {
         <div className='pokemonList'>
           {pokeFiltered.map((pokeInfo,index)=>{
               return(                  
-                <Pokedex 
+                <Pokemon 
                   key={index}
                   pokeIndex={pokeInfo.data.id}
                   pokeName={pokeInfo.data.forms[0].name}
@@ -53,7 +59,7 @@ function App() {
   );
 };
 
-export default App;
+export default Pokedex;
 
 /*
 function App() {

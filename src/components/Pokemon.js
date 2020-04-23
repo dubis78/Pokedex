@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 
-const Pokedex=(props)=>{
+const Pokemon=(props)=>{
 
     let [evolution, setEvolution] = useState(null);
  
@@ -38,7 +38,7 @@ const Pokedex=(props)=>{
         </div>
     )
 }
-export default Pokedex;
+export default Pokemon;
 
 
 
