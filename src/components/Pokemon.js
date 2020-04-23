@@ -1,21 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios';
 
-
-
-const Pokemon=(props)=>{
-
-    let [evolution, setEvolution] = useState(null);
- 
-    useEffect(() => {
-      const fetchData = async () => {
-        let result = await axios(`http://pokeapi.salestock.net/api/v2/evolution-chain/${props.pokeIndex}/`);               
-        
-        setEvolution(result.data.chain.evolves_to);
-      };
-      fetchData();    
-    }, []);
-
+const Pokemon=(props)=>{   
     return(
         <div id={props.pokeIndex} className='container'>            
             <div className='pokemon'>
@@ -32,6 +17,19 @@ const Pokemon=(props)=>{
                                 </p>               
                             )
                         })}
+                        {props.evolutionFrom.data.evolves_from_species != null 
+                            ?                            
+                                <>
+                                    <p>Evolución de:</p>
+                                    <p>{props.evolutionFrom.data.evolves_from_species.name}</p>  
+                                </>
+                            :
+                                <>
+                                    <p>Evolución de:</p>
+                                    <p>N/A</p>
+                                </>     
+                        }
+                        <h6 className='pokeNumber'>{props.pokeIndex}</h6>
                     </div>                     
                 </div>
             </div>            
@@ -39,29 +37,13 @@ const Pokemon=(props)=>{
     )
 }
 export default Pokemon;
-
-
-
 /*
-const Pokedex=(props)=>{
-    let [evolution, setEvolution] = useState(null);
- 
-    useEffect(() => {
-      const fetchData = async () => {
-         let result = await axios(`http://pokeapi.salestock.net/api/v2/pokemon/${props.pokeIndex}/`);               
-        
-        console.log(result); 
-        setEvolution(result);
-      };
-      fetchData();    
-    }, []);
-
+{if (props.evolutionFrom.data.evolves_from_specie != null) {
     return(
-        <div id={props.pokeIndex} className='container'>            
-            <div className='row justify-content-center'>
-                
-            </div>            
-        </div>
-    )
-}
+        <p>Evolución de:</p>
+        <p>props.evolutionFrom.data.evolves_from_specie.name<p>
+    )    
+}}
 */
+
+
