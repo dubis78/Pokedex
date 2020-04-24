@@ -4,6 +4,12 @@ A project inspired by the pokemon world, this project works with the information
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## First Step
+
+Please be sure that you have Node.js installed and run `npm i` or `yarn i`, before run any other command.
+
+### `npm start`
+
 ## Available Scripts
 
 In the project directory, you can run:
