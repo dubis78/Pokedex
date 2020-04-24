@@ -1,0 +1,40 @@
+.pokemon{
+    display: block;
+    background-color: seashell;
+    text-align: center;
+    margin: o auto;  
+    border-radius: 25px;
+    padding: 15px;
+  }
+  
+  .pokemon p{
+    margin: 4px 0;
+    text-decoration: none;
+  }
+  
+  a:-webkit-any-link{
+    text-decoration: none;
+  }
+  
+  a:-webkit-any-link:hover{
+    text-decoration: none;
+  }
+  
+  .pokeInfo{
+    position: relative;
+    background-color: seashell;
+    background-color: rgb(236, 71, 63);
+    border-radius: 15px;
+    padding: 5px;
+    color: seashell;
+    font-weight: 500;
+    top: -4px;
+    height: 210px;
+  }
+  
+  .pokeNumber{
+    position: relative;
+    top: -300px;
+    color: black;
+    font-weight: 800;
+  }

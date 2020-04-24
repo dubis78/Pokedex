@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import '../css/Pokemon.css'
 
 const Pokemon=(props)=>{   
     return(
         <div id={props.pokeIndex} className='container'>            
-            <div className='pokemon'>
+            <div className='pokemon cardidea'>
                 <div className='col-12'>
                     <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${props.pokeIndex}.png`} alt={`${props.pokeName}`}></img>
                     <div className='pokeInfo'>

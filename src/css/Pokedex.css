@@ -1,5 +1,34 @@
 .App {
+  text-align: center;  
+}
+
+.page1-color{
+  background-color: rgb(236, 71, 63);
+  height: 100vh;
+}
+
+.search-bar{
+  margin: 30px 50px;
   text-align: center;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #8b0000;
+  color: black;
+  border-radius: 15px;
+  width: 250px;
+}
+
+.cardidea{
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.cardidea:hover{
+  transform: translateY(-15px);
+  box-shadow: 20px 20px 20px rgba(250, 250, 250, 0.4);
 }
 
 .pokemonList{
@@ -47,46 +76,8 @@
 
 .minh-100 {
   height: 100vh;
+  width: 100vw;
 }
 
-.pokemon{
-  display: block;
-  background-color: seashell;
-  text-align: center;
-  margin: o auto;  
-  border-radius: 25px;
-  padding: 15px;
-}
 
-.pokemon p{
-  margin: 4px 0;
-  text-decoration: none;
-}
-
-a:-webkit-any-link{
-  text-decoration: none;
-}
-
-a:-webkit-any-link:hover{
-  text-decoration: none;
-}
-
-.pokeInfo{
-  position: relative;
-  background-color: seashell;
-  background-color: rgb(236, 71, 63);
-  border-radius: 15px;
-  padding: 5px;
-  color: seashell;
-  font-weight: 500;
-  top: -4px;
-  height: 210px;
-}
-
-.pokeNumber{
-  position: relative;
-  top: -300px;
-  color: black;
-  font-weight: 800;
-}
 
