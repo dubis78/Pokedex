@@ -1,3 +1,7 @@
+## Description
+A project inspired by the pokemon world, this project works with the information stored in PokeAPI.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
