@@ -33,7 +33,7 @@ function Pokedex() {
   if(loading){
     return (
       <div className='container'>
-        <div className="row justify-content-center align-items-center minh-100">
+        <div className="row justify-content-center align-items-center">
           <div>
             <img className="pika-center" src={Loading} alt='pikachu runing'></img>
             <p className="text-center">Cargando...</p>

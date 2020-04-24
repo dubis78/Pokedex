@@ -29,9 +29,9 @@ const Pokemon=(props)=>{
                                     <p>Evolución de:</p>
                                     <p>N/A</p>
                                 </>     
-                        }
-                        <h6 className='pokeNumber'>{props.pokeIndex}</h6>
-                    </div>                     
+                        }                        
+                    </div> 
+                    <h6 className='pokeNumber'>{props.pokeIndex}</h6>                    
                 </div>
             </div>            
         </div>

@@ -7,8 +7,8 @@ const About=(props)=>{
     if(props.location.hasOwnProperty('data')){
         return(              
             <div className='about-container'>
-                <div className="row justify-content-center align-items-center minh-100">
-                    <div className='card-data cordidea'>
+                <div className="row justify-content-center align-items-center">
+                    <div className='card-data'>
                         <div className='pics-container'>
                             <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${props.location.data.id}.png`} alt={`${props.location.data.name}`}></img>
                             <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${props.location.data.id}.png`} alt={`${props.location.data.name}`}></img>
