@@ -36,7 +36,7 @@ function Pokedex() {
         <div className="row justify-content-center align-items-center">
           <div>
             <img className="pika-center" src={Loading} alt='pikachu runing'></img>
-            <p className="text-center">Cargando...</p>
+            <p className="text-center text-light font-weight-bold">Cargando...</p>
           </div>
         </div>
       </div>

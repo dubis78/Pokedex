@@ -9,17 +9,8 @@
   
   .pokemon p{
     margin: 4px 0;
-    text-decoration: none;
   }
-  
-  a:-webkit-any-link{
-    text-decoration: none;
-  }
-  
-  a:-webkit-any-link:hover{
-    text-decoration: none;
-  }
-  
+
   .pokeInfo{
     position: relative;
     background-color: seashell;
