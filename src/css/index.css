@@ -1,7 +1,4 @@
-#body {
-  display: block;
-  background-color: rgb(236, 71, 63);
-}
+
 
 body {
   margin: 0;
@@ -16,4 +13,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: sans-serif;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background:rgb(236, 71, 63);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-Index: -1;
 }

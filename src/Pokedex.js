@@ -18,8 +18,8 @@ function Pokedex() {
       const resultPoke=[];
       const resultEvo=[];
       for(let i=1;i<=25;i++){
-        resultPoke[i-1] = await axios(`http://pokeapi.salestock.net/api/v2/pokemon/${i}/`);      
-        resultEvo[i-1] = await axios(`http://pokeapi.salestock.net/api/v2/pokemon-species/${i}/`); 
+        resultPoke[i-1] = await axios(`https://pokeapi.co/api/v2/pokemon/${i}/`);      
+        resultEvo[i-1] = await axios(`https://pokeapi.co/api/v2/pokemon-species/${i}/`); 
       }
       
       setPokemons(resultPoke);

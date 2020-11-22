@@ -1,13 +1,8 @@
 .App {
-  text-align: center;  
+  text-align: center;
 }
 
-.page1-color{
-  background-color: rgb(236, 71, 63);
-  height: 100%;
-}
-
-.search-bar{
+.search-bar {
   margin: 30px 50px;
   text-align: center;
   border: 0;
@@ -18,7 +13,7 @@
   width: 250px;
 }
 
-.cardidea{
+.cardidea {
   border-radius: 8px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -26,12 +21,12 @@
   transition: all 0.25s;
 }
 
-.cardidea:hover{
+.cardidea:hover {
   transform: translateY(-15px);
   box-shadow: 20px 20px 20px rgba(250, 250, 250, 0.4);
 }
 
-.pokemonList{
+.pokemonList {
   border-radius: 15px;
   display: grid;
   grid-gap: 25px;
@@ -41,36 +36,36 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .pokemonList{
-    grid-template-columns: repeat(1, 1fr);   
+  .pokemonList {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .pokemonList{
-    grid-template-columns: repeat(2, 1fr);   
+  .pokemonList {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .pokemonList{
-    grid-template-columns: repeat(3, 1fr);   
+  .pokemonList {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .pokemonList{
-    grid-template-columns: repeat(4, 1fr);   
+  .pokemonList {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .pokemonList{
-    grid-template-columns: repeat(5, 1fr);   
+  .pokemonList {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -78,6 +73,3 @@
   height: 100%;
   width: 100%;
 }
-
-
-
